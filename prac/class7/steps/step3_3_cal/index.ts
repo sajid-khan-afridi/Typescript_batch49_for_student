@@ -1,6 +1,7 @@
 import inquirer from "inquirer";
+import chalk from "chalk"
 
-let answer = await inquirer.prompt([
+let {num1,num2,operator} = await inquirer.prompt([
     {
     name: "num1",
     type: "number",
@@ -19,4 +20,14 @@ let answer = await inquirer.prompt([
     }
 ]);
 
-console.log(answer)
+// console.log(answer)
+
+if(operator==="Addition"){
+    console.log(`${num1}+${num2} = ${num1+num2}`)
+} else if(operator==="Subtraction"){
+    console.log(`${num1}-${num2} = ${num1-num2}`)
+} else if(operator==="Multiplication"){
+    console.log(`${num1}*${num2} = ${num1*num2}`)
+} else if(operator==="Division"){
+    console.log(chalk.bgRed(`${num1}/${num2} = ${num1/num2}`))
+}
