@@ -1,0 +1,31 @@
+let arr = ['apple','mango','strawberry'];
+console.log(arr.indexOf('mango'));
+console.log(arr.lastIndexOf('mango'));
+
+function arr_reverse(arr){
+  console.log(arr);
+  const rev_arr = arr.reverse()
+  console.log('reverse array ', rev_arr);
+}//
+arr_reverse(arr);
+
+const nums_arr = [5,2,6,8,3,9];
+function findNum(nums_arr){
+  const sort_arr = nums_arr.sort();
+  console.log(sort_arr);
+  const smallest = sort_arr[0];
+  const largest = sort_arr[sort_arr.length-1];
+  console.log('smallest', smallest);
+  console.log('largest', largest);
+} //
+findNum(nums_arr);
+
+function findElem(arr, to_find){
+  const found = arr.indexOf(to_find);
+  if(found){
+    console.log('element found');
+  }else{
+    console.log('element not found');    
+  }
+} //
+findElem(arr, 'banana');
